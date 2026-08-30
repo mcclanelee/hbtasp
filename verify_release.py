@@ -35,6 +35,7 @@ def main() -> None:
         for path in sorted(ROOT.rglob("*"))
         if path.is_file()
         and path.name != "RELEASE_SHA256.json"
+        and ".git" not in path.parts
         and "__pycache__" not in path.parts
         and path.suffix.lower() != ".pyc"
     }
