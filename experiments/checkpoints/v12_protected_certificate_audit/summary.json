@@ -1,0 +1,16 @@
+{
+  "protocol": "protected mandatory priority; EDF within class",
+  "certificate_instances": 40,
+  "certificate_pass_rate": 1.0,
+  "max_phi": 0.9380000000000001,
+  "min_margin": 0.061999999999999944,
+  "median_margin": 0.4,
+  "p05_margin": 0.061999999999999944,
+  "total_pre_rejected_stream_instances": 14,
+  "mandatory_released": 126000,
+  "mandatory_late": 0,
+  "admitted_mandatory_dmr": 0.0,
+  "scope": "theorem correspondence only; not a replacement for the graceful factorial",
+  "priority_estimator_dependency": "none: abstract post-designation mandatory streams",
+  "mandatory_identity_scope": "image-region identities are not represented; all designated mandatory regions use the same utility-best L5 execution contract"
+}

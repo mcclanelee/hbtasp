@@ -1,0 +1,56 @@
+{
+  "status": "complete_validated",
+  "completed_cells": 880,
+  "total_cells": 880,
+  "updated_utc": "2026-08-18T04:46:10.393105+00:00",
+  "elapsed_seconds_this_run": 3046.0797324180603,
+  "protocol": {
+    "paired_branch_settings": [
+      false,
+      true
+    ],
+    "periods_ms": [
+      40,
+      50,
+      60,
+      80,
+      100,
+      150,
+      200,
+      300,
+      500,
+      750,
+      1000
+    ],
+    "lines": [
+      4,
+      6,
+      8,
+      10
+    ],
+    "seeds": [
+      101,
+      202,
+      303,
+      404,
+      505,
+      606,
+      707,
+      808,
+      909,
+      1010
+    ],
+    "epochs": 1000,
+    "algorithm": "initial-manuscript HBTASP unchanged"
+  },
+  "sha256": {
+    "pool": "4e3f5a6c9750336fabff1b8c989918b11ca7ef7306c0a392737db85792d88643",
+    "confusion": "83a89acd926bcaf895060407dac3fb2ed5e78e3ad009291ff9eee4d1e309ae50",
+    "runner": "e5f96358cb484d6bd329490bc86791f36be03227858aadb233c3cc947efcb718",
+    "results": "cf0c54e7da56a42fcf2a05bfba24842f287ebcecd990e09a238f076539b8de97",
+    "instrumented_event_replay": "48d538c7534751b21f8a3dff17cab2e32f7cbe2e6fbade24e7c52ef440b41043",
+    "analyzer": "ec6ba40f5afd53486a8aacb08fa5bc5abe93537c37c7fcb1e220aed0c408983f"
+  },
+  "max_terminal_accounting_residual": 0.0,
+  "total_nominal_thermal_violations": 0
+}

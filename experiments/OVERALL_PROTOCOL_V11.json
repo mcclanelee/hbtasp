@@ -1,0 +1,87 @@
+{
+  "protocol_id": "hbtasp_overall_v11",
+  "purpose": "submitted-baseline-family system-level comparison",
+  "status": "frozen_design_not_yet_executed",
+  "configurations": {
+    "Static-V": {
+      "stage_one": "HBTASP assignment/admission",
+      "queue_policy": "processor-local stable EDF",
+      "network_policy": "dynamic L1-L5",
+      "voltage_policy": "fixed 0.80 V",
+      "thermal_feasibility_search": false,
+      "productive_cooling": false,
+      "early_exit": false,
+      "role": "isolate voltage and thermal-aware Stage-II decisions"
+    },
+    "ESATD-L3": {
+      "scheduler": "faithful ESATD adapter",
+      "network_policy": "fixed L3",
+      "early_exit": false,
+      "role": "submitted fixed-path energy-aware baseline"
+    },
+    "HEAT-L3": {
+      "scheduler": "faithful HEAT adapter",
+      "network_policy": "fixed L3",
+      "early_exit": false,
+      "role": "submitted fixed-path temperature-aware baseline"
+    },
+    "Full-HBTASP": {
+      "stage_one": "formal manuscript HBTASP assignment/admission",
+      "queue_policy": "processor-local stable EDF",
+      "network_policy": "dynamic L1-L5",
+      "voltage_policy": "deadline-and-RC-feasible search",
+      "thermal_feasibility_search": true,
+      "productive_cooling": true,
+      "early_exit": false,
+      "role": "formal Stage-I/Stage-II manuscript algorithm"
+    }
+  },
+  "early_exit_decision": {
+    "included_in_formal_hbtasp": false,
+    "reason": "EarlyExit appears only in the non-reproducible historical V1-V8 record and is not an operation in the frozen Stage-I/Stage-II algorithms.",
+    "reporting_rule": "No independent EarlyExit effect is claimed."
+  },
+  "workload": {
+    "release_model": "periodic implicit deadline",
+    "periods_ms": [100, 150, 200, 250, 300],
+    "production_lines": [4, 6, 8, 10],
+    "epochs_per_cell": 1000,
+    "seeds": [101, 202, 303, 404, 505, 606, 707, 808, 909, 1010],
+    "regions_per_image": 4,
+    "mandatory_regions_per_image": 1
+  },
+  "platform": {
+    "gpu0_wcet_ms_l1_l5": [6.3, 9.0, 12.3, 14.8, 20.1],
+    "gpu1_degraded_wcet_ms_l1_l5": [13.0, 18.2, 25.1, 29.5, 40.0],
+    "voltage_set_v": [0.6, 0.7, 0.8, 0.85, 0.88],
+    "reference_voltage_v": 0.8,
+    "temperature_limit_c": 60.0,
+    "ambient_temperature_c": 25.0,
+    "thermal_alpha": 41.01,
+    "thermal_gamma": 512.635,
+    "thermal_B": 0.5058,
+    "gpu1_provenance": "simulated degraded second-slot model, not a second physical T4 measurement"
+  },
+  "quality": {
+    "scheduler_average_dice_l1_l5": [0.579, 0.6183, 0.6441, 0.673, 0.6884],
+    "delivered_quality": "deadline-aware zero-credit mask/confusion replay",
+    "skipped_rejected_or_late_prediction": "all-zero mask",
+    "priority_pool": "held-out calibrated histogram pool shared by all configurations"
+  },
+  "timing_accounting": {
+    "terminal_states": ["PRE_REJECT", "WAIT_EXPIRE", "LATE_COMPLETE", "ON_TIME"],
+    "drain_after_last_release": true,
+    "scheduler_overhead_policy": "measured and reported separately; not charged to GPU WCET",
+    "right_censoring_allowed": false
+  },
+  "thermal_reporting": {
+    "model": "continuous first-order RC reconstruction from event trace",
+    "physical_sensor_measurement": false,
+    "metrics": ["ATP", "peak_temperature", "IIT"]
+  },
+  "aggregation": {
+    "main_curve": "equal-cell mean after seed-level pairing",
+    "uncertainty": "95% confidence interval over independent seed aggregates",
+    "raw_job_weighting_must_be_labeled": true
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "cells": 400,
+  "terminal_residual_max": 0.0,
+  "deep_images": 1400000,
+  "yolo_images": 1400000,
+  "nominal_iit_max": 0.0,
+  "strict_cells": 200,
+  "strict_terminal_residual_max": 0.0,
+  "strict_admitted_dmr_max": 0.0,
+  "strict_image_service_failure_mean": 0.53125
+}

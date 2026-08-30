@@ -1,0 +1,3 @@
+contrast,baseline_miss_resolved,new_miss_introduced,mcnemar_exact_p
+mild_overlap_4x416 - non_overlap_4x400,9,8,1.0
+heavy_overlap_5x400 - non_overlap_4x400,16,6,0.052478790283203125

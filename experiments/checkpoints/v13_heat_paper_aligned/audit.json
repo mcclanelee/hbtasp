@@ -1,0 +1,7 @@
+{
+  "cells": 1000,
+  "accepted_cells": 500,
+  "terminal_residual_max": 0.0,
+  "rejected_cells_with_finite_thermal": 0,
+  "accepted_admitted_dmr_max": 0.0
+}

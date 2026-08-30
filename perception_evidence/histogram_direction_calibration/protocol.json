@@ -1,0 +1,17 @@
+{
+  "train_images": 4666,
+  "validation_images": 666,
+  "test_images": 1334,
+  "template_regions_by_position": [
+    2000,
+    2000,
+    1965,
+    2000
+  ],
+  "direction_selected_only_on_validation": -1,
+  "validation_raw_distance_auc": 0.4185807259003289,
+  "distance": "initial-manuscript background-denominator chi-square",
+  "calibrated_weight": "empirical monotone rank of direction * chi-square distance",
+  "online_update": false,
+  "test_labels_used_for_calibration": false
+}

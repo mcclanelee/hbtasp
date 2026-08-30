@@ -1,0 +1,8 @@
+{
+  "checked_dynamic_cells": 400,
+  "max_absolute_error": {
+    "mean_complete_image_dice": 6.439293542825908e-15,
+    "image_complete_miss_rate": 2.7755575615628914e-17
+  },
+  "pass_tolerance_1e-12": true
+}

@@ -1,0 +1,14 @@
+{
+  "row_count": 800,
+  "expected_row_count": 800,
+  "duplicate_key_count": 0,
+  "missing_keys": [],
+  "unexpected_keys": [],
+  "terminal_residual_max_abs": 0,
+  "terminal_sum_mismatch_cells": 0,
+  "terminal_uid_mismatch_cells": 0,
+  "nonfinite_metric_cells": 0,
+  "cell_results_sha256": "e08f60d3305f767abc899f21230277c6d3f323643ba571349b794b0627eb6a68",
+  "protocol_sha256": "8742df387226c4683a179b68270e69ad3191ec73ccbdfc57b585fa4b5e9f9464",
+  "passed": true
+}

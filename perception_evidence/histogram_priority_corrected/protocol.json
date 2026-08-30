@@ -1,0 +1,14 @@
+{
+  "train_ids": 4666,
+  "test_ids": 1334,
+  "template_regions_by_position": [
+    2000,
+    2000,
+    1965,
+    2000
+  ],
+  "bins": 64,
+  "template_source": "label-confirmed clean training regions",
+  "online_update": false,
+  "score": "background-denominator chi-square"
+}

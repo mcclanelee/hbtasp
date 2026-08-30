@@ -1,0 +1,50 @@
+[
+  {
+    "method": "EDF-Dynamic-Reservation",
+    "defective_region_stratum": "1",
+    "cells": 200,
+    "mean_complete_image_dice": 0.34520204181886066,
+    "pixel_defect_recall": 0.4694461021115475,
+    "image_complete_miss_rate": 0.27034309210526325
+  },
+  {
+    "method": "EDF-Dynamic-Reservation",
+    "defective_region_stratum": "2",
+    "cells": 200,
+    "mean_complete_image_dice": 0.40676389383048056,
+    "pixel_defect_recall": 0.5330908852478671,
+    "image_complete_miss_rate": 0.16563202662721932
+  },
+  {
+    "method": "EDF-Dynamic-Reservation",
+    "defective_region_stratum": "3-4",
+    "cells": 200,
+    "mean_complete_image_dice": 0.45866718904763915,
+    "pixel_defect_recall": 0.5638611446970481,
+    "image_complete_miss_rate": 0.13164273049645378
+  },
+  {
+    "method": "HBTASP-Dynamic",
+    "defective_region_stratum": "1",
+    "cells": 200,
+    "mean_complete_image_dice": 0.344497388038639,
+    "pixel_defect_recall": 0.4517392762636399,
+    "image_complete_miss_rate": 0.28555789473684207
+  },
+  {
+    "method": "HBTASP-Dynamic",
+    "defective_region_stratum": "2",
+    "cells": 200,
+    "mean_complete_image_dice": 0.42167511326429497,
+    "pixel_defect_recall": 0.5214315981927125,
+    "image_complete_miss_rate": 0.13458308678500983
+  },
+  {
+    "method": "HBTASP-Dynamic",
+    "defective_region_stratum": "3-4",
+    "cells": 200,
+    "mean_complete_image_dice": 0.47290920664999997,
+    "pixel_defect_recall": 0.5500400032978182,
+    "image_complete_miss_rate": 0.05264140070921978
+  }
+]

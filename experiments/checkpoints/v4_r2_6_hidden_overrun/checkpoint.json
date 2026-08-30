@@ -1,0 +1,46 @@
+{
+  "status": "complete",
+  "completed_cells": 100,
+  "total_cells": 100,
+  "updated_utc": "2026-08-15T12:44:41.719746+00:00",
+  "protocol": {
+    "periods_ms": [
+      100,
+      150,
+      200,
+      250,
+      300
+    ],
+    "lines": 4,
+    "epochs": 1000,
+    "seeds": [
+      101,
+      202,
+      303,
+      404,
+      505,
+      606,
+      707,
+      808,
+      909,
+      1010
+    ],
+    "scenarios": {
+      "nominal": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rare_hidden_overrun": [
+        0.005,
+        0.1,
+        0.7
+      ]
+    },
+    "overrun_visibility": "sampled only after the dispatch decision"
+  },
+  "sha256": {
+    "pool": "8ffe33bc00a078b337885b76d0872c6abfac1f6f4283c7eb8369aa46cae7e45f",
+    "results": "4809690735ff5c06fd814b433c381a5b94f2f712d7b271019adc81fd7110aaf8"
+  }
+}

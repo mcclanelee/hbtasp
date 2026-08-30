@@ -1,0 +1,8 @@
+# Install after requirements.txt only when rerunning image/model evaluation.
+opencv-python>=4.7,<5
+scikit-learn>=1.2,<2
+joblib>=1.2,<2
+tqdm>=4.64,<5
+torch>=2.0
+torchvision>=0.15
+ultralytics>=8.0

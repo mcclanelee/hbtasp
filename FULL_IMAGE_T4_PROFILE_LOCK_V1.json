@@ -1,0 +1,25 @@
+{
+  "evidence_track": "target-platform T4 scheduling",
+  "device": "NVIDIA T4",
+  "nominal_voltage_v": 0.8,
+  "timed_runs_per_model": 10000,
+  "budget_statistic": "99.5th percentile",
+  "interpretation": "empirical nominal execution-time budget; not an absolute WCET over every OS/driver state",
+  "models": {
+    "DeepLabV3-MobileNetV3-full-image": {
+      "implementation": "torchvision deeplabv3_mobilenet_v3_large with a four-class segmentation output",
+      "input_shape": [1, 3, 256, 1600],
+      "gpu0_budget_ms": 43.6,
+      "gpu1_degraded_profile_ms": 87.2,
+      "gpu1_provenance": "derived using the declared 0.5-performance second-slot model; not a second physical measurement"
+    },
+    "YOLOv8n-full-image": {
+      "implementation": "Ultralytics YOLOv8n detector with native box outputs",
+      "input_shape": [1, 3, 256, 1600],
+      "gpu0_budget_ms": 38.3,
+      "gpu1_degraded_profile_ms": 76.6,
+      "gpu1_provenance": "derived using the declared 0.5-performance second-slot model; not a second physical measurement"
+    }
+  },
+  "reporting_rule": "Use these values for the common T4-profile-driven full-image scheduling experiment. Observations beyond the p99.5 contract are outside the nominal envelope and must be reported separately as runtime overruns."
+}
