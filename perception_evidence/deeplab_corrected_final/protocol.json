@@ -1,0 +1,23 @@
+{
+  "migration": {
+    "loaded": 352,
+    "missing": 0,
+    "unexpected": 0
+  },
+  "positive_pixels": [
+    2632804,
+    581827,
+    91494410,
+    19287745
+  ],
+  "positive_weights": [
+    30.0,
+    30.0,
+    19.888637896020096,
+    30.0
+  ],
+  "device": "cuda:0",
+  "epochs": 3,
+  "batch_size": 8,
+  "lr": 2e-05
+}

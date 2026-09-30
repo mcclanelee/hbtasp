@@ -1,0 +1,13 @@
+upper,lower,interpretation,metric,paired_difference,ci95_low,ci95_high,paired_t_p,inference_unit
+multicue_zero,histogram_zero,priority-quality effect before charged latency,mandatory_service_failure,0.0,0.0,0.0,,paired seed after averaging period-line cells
+multicue_zero,histogram_zero,priority-quality effect before charged latency,mean_complete_image_dice,0.03984350391486631,0.039081919883914386,0.040605087945818234,1.1149807001988234e-15,paired seed after averaging period-line cells
+multicue_zero,histogram_zero,priority-quality effect before charged latency,pixel_defect_recall,0.03295533018111832,0.03132199220088209,0.03458866816135455,5.819159923006027e-12,paired seed after averaging period-line cells
+multicue_zero,histogram_zero,priority-quality effect before charged latency,image_complete_miss_rate,-0.05230770833333333,-0.053276935172642224,-0.05133848149402443,8.430066970224746e-16,paired seed after averaging period-line cells
+multicue_host_cpu_p99,multicue_zero,measured host-CPU p99 latency effect,mandatory_service_failure,0.09791666666666667,0.09791666666666667,0.09791666666666667,0.0,paired seed after averaging period-line cells
+multicue_host_cpu_p99,multicue_zero,measured host-CPU p99 latency effect,mean_complete_image_dice,-0.05692912362986128,-0.05738541486689567,-0.05647283239282689,4.478512736508742e-19,paired seed after averaging period-line cells
+multicue_host_cpu_p99,multicue_zero,measured host-CPU p99 latency effect,pixel_defect_recall,-0.08640036493176903,-0.08718565731209409,-0.08561507255144397,1.3885132115280204e-18,paired seed after averaging period-line cells
+multicue_host_cpu_p99,multicue_zero,measured host-CPU p99 latency effect,image_complete_miss_rate,0.10260495833333332,0.1015261974144746,0.10368371925219202,5.1479249744368255e-18,paired seed after averaging period-line cells
+multicue_host_cpu_p99,histogram_zero,joint implemented-priority effect,mandatory_service_failure,0.09791666666666667,0.09791666666666667,0.09791666666666667,0.0,paired seed after averaging period-line cells
+multicue_host_cpu_p99,histogram_zero,joint implemented-priority effect,mean_complete_image_dice,-0.017085619714994973,-0.017869504458950903,-0.016301734971039043,2.9120168373097244e-12,paired seed after averaging period-line cells
+multicue_host_cpu_p99,histogram_zero,joint implemented-priority effect,pixel_defect_recall,-0.05344503475065071,-0.05519777620307447,-0.05169229329822695,1.4292322264779528e-13,paired seed after averaging period-line cells
+multicue_host_cpu_p99,histogram_zero,joint implemented-priority effect,image_complete_miss_rate,0.05029725,0.0491509012601634,0.0514435987398366,5.426204367496763e-15,paired seed after averaging period-line cells

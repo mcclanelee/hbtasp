@@ -1,0 +1,9 @@
+upper,lower,metric,paired_difference,ci95_low,ci95_high,paired_t_p,inference_unit,n
+random_frozen,calibrated_histogram,mandatory_service_failure,0.0,0.0,0.0,1.0,paired seed after averaging 20 period-line cells,10
+random_frozen,calibrated_histogram,mean_complete_image_dice,-0.019874289188681254,-0.02072664701990387,-0.019021931357458638,1.5900138039104111e-12,paired seed after averaging 20 period-line cells,10
+random_frozen,calibrated_histogram,pixel_defect_recall,-0.019155929714604725,-0.020996177120032725,-0.017315682309176725,2.141480735740413e-09,paired seed after averaging 20 period-line cells,10
+random_frozen,calibrated_histogram,image_complete_miss_rate,0.028387125000000003,0.02702729395386628,0.029746956046133727,4.288267042614454e-12,paired seed after averaging 20 period-line cells,10
+defect_oracle,calibrated_histogram,mandatory_service_failure,0.0,0.0,0.0,1.0,paired seed after averaging 20 period-line cells,10
+defect_oracle,calibrated_histogram,mean_complete_image_dice,0.08988782650026653,0.08926588352114319,0.09050976947938986,1.1925140216004789e-19,paired seed after averaging 20 period-line cells,10
+defect_oracle,calibrated_histogram,pixel_defect_recall,0.06442697136150627,0.0627485527773167,0.06610538994569584,1.805259111119016e-14,paired seed after averaging 20 period-line cells,10
+defect_oracle,calibrated_histogram,image_complete_miss_rate,-0.07775754166666668,-0.07876730590546725,-0.0767477774278661,3.442993358294208e-17,paired seed after averaging 20 period-line cells,10

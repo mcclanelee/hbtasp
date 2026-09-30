@@ -1,0 +1,2 @@
+mode,regions,defective_regions,roc_auc,pr_auc,spearman_area,spearman_p,top1_defective_region_hit_rate
+original,2664,1349,0.5814192740996711,0.578894036075239,0.14198275193659024,1.809348306679531e-13,0.581081081081081

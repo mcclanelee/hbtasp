@@ -1,0 +1,13 @@
+strategy,metric,mean,ci95_low,ci95_high,inference_unit,n
+calibrated_histogram,mandatory_service_failure,0.032499999999999994,0.032499999999999994,0.032499999999999994,seed after averaging 20 period-line cells,10
+calibrated_histogram,mean_complete_image_dice,0.4067955920133139,0.40614222801545863,0.40744895601116915,seed after averaging 20 period-line cells,10
+calibrated_histogram,pixel_defect_recall,0.5301823397602626,0.5283813632967027,0.5319833162238226,seed after averaging 20 period-line cells,10
+calibrated_histogram,image_complete_miss_rate,0.16884595833333332,0.16804989721290334,0.1696420194537633,seed after averaging 20 period-line cells,10
+random_frozen,mandatory_service_failure,0.032499999999999994,0.032499999999999994,0.032499999999999994,seed after averaging 20 period-line cells,10
+random_frozen,mean_complete_image_dice,0.38692130282463266,0.3866540142120433,0.387188591437222,seed after averaging 20 period-line cells,10
+random_frozen,pixel_defect_recall,0.5110264100456579,0.5103704579049004,0.5116823621864153,seed after averaging 20 period-line cells,10
+random_frozen,image_complete_miss_rate,0.1972330833333333,0.19618342176695258,0.19828274489971404,seed after averaging 20 period-line cells,10
+defect_oracle,mandatory_service_failure,0.032499999999999994,0.032499999999999994,0.032499999999999994,seed after averaging 20 period-line cells,10
+defect_oracle,mean_complete_image_dice,0.4966834185135805,0.49629273456124756,0.49707410246591344,seed after averaging 20 period-line cells,10
+defect_oracle,pixel_defect_recall,0.5946093111217688,0.5939637250250691,0.5952548972184686,seed after averaging 20 period-line cells,10
+defect_oracle,image_complete_miss_rate,0.09108841666666664,0.09069711932714045,0.09147971400619284,seed after averaging 20 period-line cells,10

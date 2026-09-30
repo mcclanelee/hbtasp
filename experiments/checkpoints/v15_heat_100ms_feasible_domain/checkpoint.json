@@ -1,0 +1,33 @@
+{
+  "status": "complete",
+  "purpose": "100-ms HEAT-L3 feasibility-domain extension; not pooled into Overall",
+  "period_ms": 100,
+  "level": 3,
+  "lines": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "seeds": [
+    101,
+    202,
+    303,
+    404,
+    505,
+    606,
+    707,
+    808,
+    909,
+    1010
+  ],
+  "cells": 40,
+  "completed_cells": 40,
+  "accepted_cells": 30,
+  "rejected_cells_with_finite_thermal": 0,
+  "sha256": {
+    "runner": "19b678842309a1e0699a108e335ea14ca0fea7ca064ef52095867b20d7413594",
+    "base_heat_runner": "7b4588942e43287946106ca2c572b7bb88e153d5c971e030e10da0c7709d10b9",
+    "results": "44c289a9874e376e548d49623644412ccb5e1ee554727398a62551a4f7dc114e"
+  }
+}

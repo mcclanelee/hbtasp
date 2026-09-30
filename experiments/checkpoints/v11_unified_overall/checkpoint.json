@@ -1,0 +1,14 @@
+{
+  "status": "complete",
+  "completed_cells": 800,
+  "total_cells": 800,
+  "updated_utc": "2026-08-16T14:09:09.375002+00:00",
+  "elapsed_seconds_this_run": 49.2299427986145,
+  "protocol_id": "hbtasp_overall_v11",
+  "protocol_sha256": "8742df387226c4683a179b68270e69ad3191ec73ccbdfc57b585fa4b5e9f9464",
+  "pool_sha256": "31fe3ef9e44c2a3b9f8af9331f2727651cd3835a0c1f293097a3c754cae54b00",
+  "confusion_sha256": "83a89acd926bcaf895060407dac3fb2ed5e78e3ad009291ff9eee4d1e309ae50",
+  "adapter_sha256": "c03b7229a23a156fef90dbf7d10c34ebcb631f35e8c7a35c0d75464bb055337e",
+  "terminal_registry_sha256": "b9e63a3293a6b5fab55ef945d92f5b1e316c498832b044fee24824d6c7bba969",
+  "result_sha256": "e08f60d3305f767abc899f21230277c6d3f323643ba571349b794b0627eb6a68"
+}

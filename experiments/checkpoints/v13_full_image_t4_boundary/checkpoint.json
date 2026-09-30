@@ -1,0 +1,48 @@
+{
+  "status": "complete",
+  "completed_cells": 400,
+  "total_cells": 400,
+  "updated_utc": "2026-08-17T08:27:32.712901+00:00",
+  "elapsed_seconds_this_run": 30.857398509979248,
+  "profile_sha256": "85bb0e2e4f857faeab13605c22be7b8dd17227418df74b0ff3f9adf088cd4fed",
+  "pool_sha256": "31fe3ef9e44c2a3b9f8af9331f2727651cd3835a0c1f293097a3c754cae54b00",
+  "protocol": {
+    "periods_ms": [
+      100,
+      150,
+      200,
+      250,
+      300
+    ],
+    "lines": [
+      4,
+      6,
+      8,
+      10
+    ],
+    "seeds": [
+      101,
+      202,
+      303,
+      404,
+      505,
+      606,
+      707,
+      808,
+      909,
+      1010
+    ],
+    "epochs": 1000,
+    "release": "periodic simultaneous per-line",
+    "scheduler": "stable earliest-finish admission",
+    "deadline_credit": "all-zero for rejected full image"
+  },
+  "sha256": {
+    "profile": "85bb0e2e4f857faeab13605c22be7b8dd17227418df74b0ff3f9adf088cd4fed",
+    "pool": "31fe3ef9e44c2a3b9f8af9331f2727651cd3835a0c1f293097a3c754cae54b00",
+    "deeplab_confusion": "63271c4d791e681faff860cb3f249a7bb52d1110ccdd278b1aeab1c4335657ec",
+    "yolo_image_results": "aff7fce97de58582fdc8a3f582ffcb2e181b9c603ac0f7085e66ee2a07ff5804",
+    "runner": "6e814ba528baca2e830bc99b307910574df02e3bc0438feb32742f0d1dcb4b01",
+    "results": "01fb7c5e4ce888afc441d4adfe7f12cd35e8ac6605243b7d2f4053d1dda4a31c"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "calibrated_histogram": {
+    "priority_defect_hit_rate": 0.628,
+    "priority_defect_pixel_share": 0.3484935445714539
+  },
+  "random_frozen": {
+    "priority_defect_hit_rate": 0.516,
+    "priority_defect_pixel_share": 0.2546044398477595
+  },
+  "defect_oracle": {
+    "priority_defect_hit_rate": 1.0,
+    "priority_defect_pixel_share": 0.7638880137050303
+  }
+}

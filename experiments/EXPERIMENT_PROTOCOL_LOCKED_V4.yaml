@@ -1,0 +1,22 @@
+version: LOCKED_V4
+date: 2026-08-15
+inherits: EXPERIMENT_PROTOCOL_LOCKED_V3
+purpose: full_HBTASP_appearance_priority
+priority_input:
+  pool: appearance_priority_pool_v1/sub_defect_pool_appearance_priority.json
+  score: background_denominator_chi_square_histogram_distance
+  image_mode: original
+  normalization: within_image_min_max
+  semantics: appearance_priority_not_defect_probability
+  inference_uses_test_labels: false
+  known_final_test_audit:
+    roc_auc: 0.35177751568482973
+    spearman_defect_area: -0.2657381327165793
+    top1_defective_region_hit_rate: 0.3568215892053973
+role_mapping:
+  mandatory_stream: highest_appearance_priority_region_per_image
+  optional_streams: remaining_regions_in_descending_priority_order
+  persistent_stage_one_mapping: by_priority_role_and_production_line
+comparison_rule:
+  report_with_uniform_priority_ablation: true
+  do_not_describe_weight_as_defect_probability: true

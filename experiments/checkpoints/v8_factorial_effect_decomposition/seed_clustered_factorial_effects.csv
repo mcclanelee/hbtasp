@@ -1,0 +1,21 @@
+effect,definition,metric,metric_label,mean_difference,ci95_low,ci95_high,independent_seed_units
+Scheduling effect under Fixed L3,HBTASP (Fixed L3) minus EDF--FixedL3,mandatory_dmr,Mandatory service failure,-0.25945166666666664,-0.2599084911198817,-0.2589948422134516,10
+Scheduling effect under Fixed L3,HBTASP (Fixed L3) minus EDF--FixedL3,mean_complete_image_dice,Complete-image Dice,0.0524971220813911,0.051587768904679525,0.05340647525810268,10
+Scheduling effect under Fixed L3,HBTASP (Fixed L3) minus EDF--FixedL3,pixel_defect_recall,End-to-end recall,0.040688547827087654,0.03797075337209002,0.043406342282085286,10
+Scheduling effect under Fixed L3,HBTASP (Fixed L3) minus EDF--FixedL3,image_complete_miss_rate,Image complete-miss rate,-0.13280145833333337,-0.1337771209566545,-0.13182579571001224,10
+Scheduling effect under Dynamic L1--L5,HBTASP minus EDF--Dynamic-Reservation,mandatory_dmr,Mandatory service failure,-0.18020612499999997,-0.1824253087869171,-0.17798694121308284,10
+Scheduling effect under Dynamic L1--L5,HBTASP minus EDF--Dynamic-Reservation,mean_complete_image_dice,Complete-image Dice,0.008788472696011101,0.00773546656067896,0.009841478831343243,10
+Scheduling effect under Dynamic L1--L5,HBTASP minus EDF--Dynamic-Reservation,pixel_defect_recall,End-to-end recall,-0.013702926960096595,-0.01739398188842745,-0.01001187203176574,10
+Scheduling effect under Dynamic L1--L5,HBTASP minus EDF--Dynamic-Reservation,image_complete_miss_rate,Image complete-miss rate,-0.026991291666666667,-0.027990836689775152,-0.025991746643558182,10
+Dynamic-path effect under EDF,EDF--Dynamic-Reservation minus EDF--FixedL3,mandatory_dmr,Mandatory service failure,-0.04674554166666667,-0.04905866108175149,-0.044432422251581845,10
+Dynamic-path effect under EDF,EDF--Dynamic-Reservation minus EDF--FixedL3,mean_complete_image_dice,Complete-image Dice,0.0007026727698188129,-0.0006705244377087388,0.0020758699773463646,10
+Dynamic-path effect under EDF,EDF--Dynamic-Reservation minus EDF--FixedL3,pixel_defect_recall,End-to-end recall,0.06361378088502925,0.058272380060776105,0.0689551817092824,10
+Dynamic-path effect under EDF,EDF--Dynamic-Reservation minus EDF--FixedL3,image_complete_miss_rate,Image complete-miss rate,-0.09812275000000001,-0.09967655739688817,-0.09656894260311184,10
+Dynamic-path effect under HBTASP,HBTASP minus HBTASP (Fixed L3),mandatory_dmr,Mandatory service failure,0.032499999999999994,0.032499999999999994,0.032499999999999994,10
+Dynamic-path effect under HBTASP,HBTASP minus HBTASP (Fixed L3),mean_complete_image_dice,Complete-image Dice,-0.04300597661556118,-0.043672154057091406,-0.042339799174030954,10
+Dynamic-path effect under HBTASP,HBTASP minus HBTASP (Fixed L3),pixel_defect_recall,End-to-end recall,0.009222306097845,0.007873995369561865,0.010570616826128136,10
+Dynamic-path effect under HBTASP,HBTASP minus HBTASP (Fixed L3),image_complete_miss_rate,Image complete-miss rate,0.007687416666666669,0.006950738884760248,0.008424094448573088,10
+Scheduler--path interaction,(HBTASP dynamic-path effect) minus (EDF dynamic-path effect),mandatory_dmr,Mandatory service failure,0.07924554166666667,0.07693242225158184,0.0815586610817515,10
+Scheduler--path interaction,(HBTASP dynamic-path effect) minus (EDF dynamic-path effect),mean_complete_image_dice,Complete-image Dice,-0.043708649385379994,-0.045337073399531115,-0.04208022537122887,10
+Scheduler--path interaction,(HBTASP dynamic-path effect) minus (EDF dynamic-path effect),pixel_defect_recall,End-to-end recall,-0.054391474787184244,-0.060157500601853306,-0.04862544897251518,10
+Scheduler--path interaction,(HBTASP dynamic-path effect) minus (EDF dynamic-path effect),image_complete_miss_rate,Image complete-miss rate,0.10581016666666668,0.10411334034218656,0.1075069929911468,10

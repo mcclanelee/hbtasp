@@ -1,0 +1,50 @@
+{
+  "status": "complete",
+  "completed_cells": 1000,
+  "total_cells": 1000,
+  "updated_utc": "2026-08-17T09:03:45.519815+00:00",
+  "protocol": {
+    "levels": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "periods_ms": [
+      100,
+      150,
+      200,
+      250,
+      300
+    ],
+    "lines": [
+      4,
+      6,
+      8,
+      10
+    ],
+    "seeds": [
+      101,
+      202,
+      303,
+      404,
+      505,
+      606,
+      707,
+      808,
+      909,
+      1010
+    ],
+    "epochs": 1000,
+    "release": "periodic"
+  },
+  "sha256": {
+    "pool": "31fe3ef9e44c2a3b9f8af9331f2727651cd3835a0c1f293097a3c754cae54b00",
+    "confusion": "83a89acd926bcaf895060407dac3fb2ed5e78e3ad009291ff9eee4d1e309ae50",
+    "runner": "c45cb393244c6d12042afcffa50e443844c2847192707c344e5df632bd6fe132",
+    "adapter": "f4de7fe24072b35dc9f57de5954ba8ea24714d0ae020e8b9d9b9affb37716789",
+    "event_kernel": "6ee02a370212f9a50556ee7343b7a8ee689f42fd010cdb194a4481ccc20f8e7d",
+    "results": "e67b99cc51df147262e361908bd7ba1d3edcc14eccc1f0a0a61712411b5fc207"
+  }
+}

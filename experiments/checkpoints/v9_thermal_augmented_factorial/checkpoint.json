@@ -1,0 +1,48 @@
+{
+  "status": "complete_validated",
+  "completed_cells": 800,
+  "total_cells": 800,
+  "updated_utc": "2026-08-16T09:04:20.821754+00:00",
+  "elapsed_seconds_this_run": 686.1026256084442,
+  "protocol": {
+    "configs": [
+      "EDF-FixedL3",
+      "EDF-Dynamic-Reservation",
+      "HBTASP-FixedL3",
+      "HBTASP-Dynamic"
+    ],
+    "periods_ms": [
+      100,
+      150,
+      200,
+      250,
+      300
+    ],
+    "lines": [
+      4,
+      6,
+      8,
+      10
+    ],
+    "seeds": [
+      101,
+      202,
+      303,
+      404,
+      505,
+      606,
+      707,
+      808,
+      909,
+      1010
+    ],
+    "epochs": 1000,
+    "thermal_reconstruction": "continuous RC from unchanged event traces"
+  },
+  "validated_cells": 800,
+  "max_v8_dmr_difference": 0.0,
+  "max_v8_dci_difference": 0.0,
+  "total_thermal_violations": 0,
+  "max_iit_celsius_seconds": 0.0,
+  "max_peak_temperature_c": 59.99999999708909
+}

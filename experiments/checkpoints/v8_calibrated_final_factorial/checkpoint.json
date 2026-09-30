@@ -1,0 +1,56 @@
+{
+  "status": "complete_validated",
+  "completed_cells": 800,
+  "total_cells": 800,
+  "updated_utc": "2026-08-16T06:54:21.898478+00:00",
+  "elapsed_seconds_this_run": 1626.3566524982452,
+  "last_cell": {
+    "configuration": "HBTASP-Dynamic",
+    "period_ms": 300,
+    "lines": 10,
+    "seed": 1010
+  },
+  "protocol": {
+    "periods": [
+      100,
+      150,
+      200,
+      250,
+      300
+    ],
+    "lines": [
+      4,
+      6,
+      8,
+      10
+    ],
+    "seeds": [
+      101,
+      202,
+      303,
+      404,
+      505,
+      606,
+      707,
+      808,
+      909,
+      1010
+    ],
+    "epochs": 1000,
+    "budget": "Stage-I selected-level from construction time",
+    "release_mode": "periodic",
+    "mandatory_tie": "mandatory first"
+  },
+  "sha256": {
+    "pool": "31fe3ef9e44c2a3b9f8af9331f2727651cd3835a0c1f293097a3c754cae54b00",
+    "confusion": "83a89acd926bcaf895060407dac3fb2ed5e78e3ad009291ff9eee4d1e309ae50",
+    "hbtasp": "bbf5592f615862dbac24010923ce5f134b5f32885c423e68845530397d722946",
+    "event_replay": "f4f8323bef71f832f29cab12d99ffa633c2f770263e71a6ea421c01b1b0d86b3",
+    "edf": "ed1a9d01f4a0df9cc4d7afef5629bd398513bd6844fc4b0bc9c2fdf3b39aa4de",
+    "data_authority": "62e9b7fd41688ca8fa59569df217a35be95c54a9a063340999732914e4bce4a0",
+    "results": "84d5852c0671d25d261b95b3be18ade9d9420b72476238fce711614bee665680"
+  },
+  "validated_cells": 800,
+  "max_terminal_accounting_residual": 0.0,
+  "total_thermal_violations": 0
+}

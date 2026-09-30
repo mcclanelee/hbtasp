@@ -1,0 +1,89 @@
+{
+  "1": {
+    "mean_complete_image_dice": {
+      "contrast": "HBTASP-Dynamic - EDF-Dynamic-Reservation",
+      "mean_difference": -0.05118232824405282,
+      "ci95": [
+        -0.05302690211083373,
+        -0.049337754377271906
+      ],
+      "n_seeds": 10
+    },
+    "pixel_defect_recall": {
+      "contrast": "HBTASP-Dynamic - EDF-Dynamic-Reservation",
+      "mean_difference": -0.06575314006993513,
+      "ci95": [
+        -0.06949831281148136,
+        -0.0620079673283889
+      ],
+      "n_seeds": 10
+    },
+    "image_complete_miss_rate": {
+      "contrast": "HBTASP-Dynamic - EDF-Dynamic-Reservation",
+      "mean_difference": 0.12593037280701758,
+      "ci95": [
+        0.12396249259206424,
+        0.12789825302197091
+      ],
+      "n_seeds": 10
+    }
+  },
+  "2": {
+    "mean_complete_image_dice": {
+      "contrast": "HBTASP-Dynamic - EDF-Dynamic-Reservation",
+      "mean_difference": -0.03961417584117509,
+      "ci95": [
+        -0.042001146184843255,
+        -0.037227205497506924
+      ],
+      "n_seeds": 10
+    },
+    "pixel_defect_recall": {
+      "contrast": "HBTASP-Dynamic - EDF-Dynamic-Reservation",
+      "mean_difference": -0.06389095170867602,
+      "ci95": [
+        -0.06825459790930999,
+        -0.059527305508042055
+      ],
+      "n_seeds": 10
+    },
+    "image_complete_miss_rate": {
+      "contrast": "HBTASP-Dynamic - EDF-Dynamic-Reservation",
+      "mean_difference": 0.06220586785009863,
+      "ci95": [
+        0.05764875291945041,
+        0.06676298278074685
+      ],
+      "n_seeds": 10
+    }
+  },
+  "3-4": {
+    "mean_complete_image_dice": {
+      "contrast": "HBTASP-Dynamic - EDF-Dynamic-Reservation",
+      "mean_difference": -0.008652294583469621,
+      "ci95": [
+        -0.01106452852489471,
+        -0.0062400606420445325
+      ],
+      "n_seeds": 10
+    },
+    "pixel_defect_recall": {
+      "contrast": "HBTASP-Dynamic - EDF-Dynamic-Reservation",
+      "mean_difference": -0.040058786790713584,
+      "ci95": [
+        -0.044807996177021824,
+        -0.035309577404405344
+      ],
+      "n_seeds": 10
+    },
+    "image_complete_miss_rate": {
+      "contrast": "HBTASP-Dynamic - EDF-Dynamic-Reservation",
+      "mean_difference": -0.05263992316784869,
+      "ci95": [
+        -0.056038434819796944,
+        -0.04924141151590044
+      ],
+      "n_seeds": 10
+    }
+  }
+}

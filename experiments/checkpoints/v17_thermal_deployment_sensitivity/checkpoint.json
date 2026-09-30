@@ -1,0 +1,76 @@
+{
+  "status": "complete",
+  "completed_cells": 80,
+  "total_cells": 80,
+  "updated_utc": "2026-08-17T12:29:03.525687+00:00",
+  "elapsed_seconds_this_run": 48.35467052459717,
+  "protocol": {
+    "period_ms": 200,
+    "lines": 4,
+    "epochs": 1000,
+    "seeds": [
+      101,
+      202,
+      303,
+      404,
+      505,
+      606,
+      707,
+      808,
+      909,
+      1010
+    ],
+    "scenarios": [
+      [
+        "response",
+        0.8,
+        25.0
+      ],
+      [
+        "response",
+        0.9,
+        25.0
+      ],
+      [
+        "response",
+        1.0,
+        25.0
+      ],
+      [
+        "response",
+        1.1,
+        25.0
+      ],
+      [
+        "response",
+        1.2,
+        25.0
+      ],
+      [
+        "ambient",
+        1.0,
+        20.0
+      ],
+      [
+        "ambient",
+        1.0,
+        30.0
+      ],
+      [
+        "ambient",
+        1.0,
+        35.0
+      ]
+    ],
+    "controller_model": "nominal manuscript RC parameters",
+    "plant_model": "ambient-shifted absorbed RC; steady-state rise and time constant scaled by q",
+    "identifiability_boundary": "q is effective, not a uniquely identified physical R_th"
+  },
+  "sha256": {
+    "pool": "31fe3ef9e44c2a3b9f8af9331f2727651cd3835a0c1f293097a3c754cae54b00",
+    "confusion": "83a89acd926bcaf895060407dac3fb2ed5e78e3ad009291ff9eee4d1e309ae50",
+    "event_replay": "17390d0b704147cc8825eeeb907ec19a80c4b959dbca1e475f94224510b4bcbd",
+    "algorithm": "bada0c9afeccbc5c4b4147a7ae95a8638963b9c56d199ea4a7fedd1a7363d85b",
+    "results": "c28fe2011bdcf169d6e791c4fc516d58c64517e8239684c6eb907040c2f299a1"
+  }
+}

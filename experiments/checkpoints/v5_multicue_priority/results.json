@@ -1,0 +1,80 @@
+{
+  "status": "complete",
+  "feature_version": "multicue_v1_gray_lab_gradient_spatial_relative",
+  "split_protocol": "csdnn_final_70_10_20\\split_protocol.json",
+  "selected_C": 1.0,
+  "hyperparameter_selection": [
+    {
+      "C": 0.01,
+      "calibration_average_precision": 0.8035321654189906
+    },
+    {
+      "C": 0.1,
+      "calibration_average_precision": 0.8078079203391291
+    },
+    {
+      "C": 1.0,
+      "calibration_average_precision": 0.8080261644975744
+    },
+    {
+      "C": 10.0,
+      "calibration_average_precision": 0.8080239874182951
+    }
+  ],
+  "test_metrics_1334_images": {
+    "region_roc_auc": 0.8256731564177833,
+    "region_average_precision": 0.8108854561130855,
+    "top1_defect_region_hit_rate": 0.8125937031484258,
+    "priority_defect_pixel_share": 0.5151256087336001,
+    "priority_complete_miss_rate": 0.1874062968515742
+  },
+  "common_500_multicue": {
+    "region_roc_auc": 0.8271348271348271,
+    "region_average_precision": 0.8112715362553102,
+    "top1_defect_region_hit_rate": 0.812,
+    "priority_defect_pixel_share": 0.5191307185938798,
+    "priority_complete_miss_rate": 0.188
+  },
+  "common_500_histogram": {
+    "top1_defect_region_hit_rate": 0.328,
+    "priority_defect_pixel_share": 0.12149108070195361,
+    "priority_complete_miss_rate": 0.672
+  },
+  "cpu_priority_latency_ms_excluding_image_io": {
+    "1": {
+      "runs": 100,
+      "mean_ms": 3.1962459999996895,
+      "p99_ms": 3.8769280000013877,
+      "max_ms": 4.364800000018931
+    },
+    "4": {
+      "runs": 100,
+      "mean_ms": 13.219604999999603,
+      "p99_ms": 16.383768999993727,
+      "max_ms": 17.697400000002972
+    },
+    "8": {
+      "runs": 100,
+      "mean_ms": 26.06597200000124,
+      "p99_ms": 30.07260300000155,
+      "max_ms": 30.15209999998092
+    },
+    "10": {
+      "runs": 100,
+      "mean_ms": 33.07504799999861,
+      "p99_ms": 40.54495800000581,
+      "max_ms": 41.768399999995154
+    }
+  },
+  "measurement_hardware": "T4_experiment_host_CPU_measurement",
+  "host_gpu_context": "NVIDIA_T4_GPU_not_used_in_timed_region",
+  "timing_scope": "CPU_feature_extraction_and_classifier_only_images_preloaded",
+  "gpu_timing_status": "GPU_not_used_in_timed_region",
+  "no_online_clean_template": true,
+  "sha256": {
+    "split": "5accf114ac08d5b26233bed07a59d5884c679ed802949d95e87322fc0480305c",
+    "histogram_pool": "8ffe33bc00a078b337885b76d0872c6abfac1f6f4283c7eb8369aa46cae7e45f",
+    "model": "7a6d3cc4f6b396771ab0a3b19efc9184996e2a01d42518fcdf65d552bec850de",
+    "replay_pool": "d936a9f900ca60969a7a9f3a6d36c7b2e63c0cc5e72cb01bf1ab2f918f8f0c03"
+  }
+}
