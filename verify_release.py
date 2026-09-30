@@ -11,6 +11,7 @@ CHECKPOINTS = ROOT / "experiments" / "checkpoints"
 
 EXPECTED_ROWS = {
     "v4_r2_6_hidden_overrun": ("cell_results.csv", 100),
+    "v5_productive_cooling_ablation": ("cell_results.csv", 560),
     "v5_strict_all_regions_boundary": ("cell_results.csv", 700),
     "v5_tight_period_dynamic_boundary": ("cell_results.csv", 700),
     "v8_calibrated_final_factorial": ("cell_results.csv", 800),
@@ -41,6 +42,17 @@ def read_rows(path: Path) -> list[dict[str, str]]:
 
 def numeric(row: dict[str, str], key: str) -> float:
     return float(row.get(key, "0") or 0)
+
+
+def check_close(
+    failures: list[str], label: str, observed: float, expected: float,
+    tolerance: float = 5e-12,
+) -> None:
+    """Check a frozen published value without hiding rounding drift."""
+    if abs(observed - expected) > tolerance:
+        failures.append(
+            f"{label}: observed={observed:.12g}, expected={expected:.12g}"
+        )
 
 
 def main() -> None:
@@ -117,6 +129,91 @@ def main() -> None:
             failures.append("v10: mandatory terminal outcomes are not exhaustive")
             break
 
+    # The article reports equal-cell means, not release-count-weighted rates.
+    outcome_summary_path = (
+        CHECKPOINTS / "v10_mandatory_outcome_audit" /
+        "mandatory_outcome_summary.csv"
+    )
+    if outcome_summary_path.is_file():
+        outcome_summary = {
+            row["configuration"]: row for row in read_rows(outcome_summary_path)
+        }
+        published_cell_means = {
+            "EDF-FixedL3": 0.25945166666666664,
+            "EDF-Dynamic-Reservation": 0.212706125,
+            "HBTASP-FixedL3": 0.0,
+            "HBTASP-Dynamic": 0.0325,
+        }
+        for configuration, expected in published_cell_means.items():
+            row = outcome_summary.get(configuration)
+            if row is None:
+                failures.append(f"v10: missing configuration {configuration}")
+                continue
+            check_close(
+                failures,
+                f"v10 {configuration} equal-cell service failure",
+                numeric(row, "cell_mean_mandatory_service_failure_rate"),
+                expected,
+            )
+
+    # Supplement S8: 560-cell paired low-voltage ablation.
+    cooling_path = (
+        CHECKPOINTS / "v5_productive_cooling_ablation" /
+        "paired_seed_contrasts.csv"
+    )
+    if cooling_path.is_file():
+        cooling = {
+            row["metric"]: row for row in read_rows(cooling_path)
+            if row.get("stratum") == "all_periods"
+        }
+        published_cooling = {
+            "mean_voltage": -0.004677221149535851,
+            "peak_modeled_temperature": -0.00014782587708024,
+            "pixel_defect_recall": 0.001141328963295343,
+            "image_complete_miss_rate": -0.0008075892857142832,
+            "mean_complete_image_dice": -0.002363985056488706,
+        }
+        for metric, expected in published_cooling.items():
+            row = cooling.get(metric)
+            if row is None:
+                failures.append(f"v5 cooling: missing metric {metric}")
+                continue
+            check_close(
+                failures,
+                f"v5 cooling {metric}",
+                numeric(row, "cooling_minus_control"),
+                expected,
+            )
+
+    # Supplement S7: independent 500-run T4 overlap-processing audit.
+    overlap_runtime_path = (
+        ROOT / "perception_evidence" / "overlap_runtime_t4" /
+        "overlap_runtime_t4.json"
+    )
+    if overlap_runtime_path.is_file():
+        overlap = json.loads(overlap_runtime_path.read_text(encoding="utf-8"))
+        geometries = overlap.get("geometries", {})
+        published_overlap = {
+            "non_overlap_4x400": (54.76820860000001, 63.34948849999998),
+            "mild_overlap_4x416": (55.1576648, 64.13645849999999),
+            "heavy_overlap_5x400": (67.36229939999998, 81.39100099999997),
+        }
+        for geometry, (mean_ms, p995_ms) in published_overlap.items():
+            row = geometries.get(geometry)
+            if row is None:
+                failures.append(f"overlap runtime: missing geometry {geometry}")
+                continue
+            if int(row.get("runs", 0)) != 500:
+                failures.append(f"overlap runtime {geometry}: runs must equal 500")
+            check_close(
+                failures, f"overlap runtime {geometry} mean",
+                float(row["mean_ms"]), mean_ms,
+            )
+            check_close(
+                failures, f"overlap runtime {geometry} p99.5",
+                float(row["p99_5_ms"]), p995_ms,
+            )
+
     strict = loaded.get("v5_strict_all_regions_boundary", [])
     if any(row.get("hardware_input_gpu1") != "power_capped_T4_measured_input"
            for row in strict):
@@ -145,11 +242,15 @@ def main() -> None:
         ROOT / "experiments" / "checkpoints" / "v9_restored_main_figures" / "v9_factorial_ablation.pdf",
         ROOT / "experiments" / "checkpoints" / "v10_mandatory_outcome_audit" / "v10_mandatory_terminal_outcomes.pdf",
         ROOT / "experiments" / "checkpoints" / "v10_mandatory_outcome_audit" / "v10_dynamic_hard_realtime_service_map.pdf",
+        ROOT / "experiments" / "checkpoints" / "v5_productive_cooling_ablation" / "paired_seed_contrasts.csv",
+        ROOT / "experiments" / "checkpoints" / "v5_productive_cooling_ablation" / "r2_1_productive_cooling_ablation.pdf",
         ROOT / "experiments" / "checkpoints" / "v14_unified_overall_corrected_heat" / "cell_results.csv",
         ROOT / "experiments" / "checkpoints" / "v19_topk_mandatory_sweep" / "v19_topk_load_envelope.pdf",
         ROOT / "experiments" / "checkpoints" / "v21_multicue_priority_aligned" / "v21_priority_calibration_quality_cost.pdf",
         ROOT / "experiments" / "checkpoints" / "scheduler_overhead" / "reported_mean_overhead.csv",
         ROOT / "perception_evidence" / "overlap_corrected_final" / "summary.csv",
+        overlap_runtime_path,
+        ROOT / "perception_evidence" / "overlap_runtime_t4" / "PROTOCOL_AND_RESULTS.md",
     ]
     failures.extend(
         f"missing required artifact: {path.relative_to(ROOT).as_posix()}"

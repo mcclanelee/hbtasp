@@ -1,0 +1,44 @@
+{
+  "scope": "independent NVIDIA T4 prototype timing audit; distinct from the per-path T4 scheduling profiles",
+  "platform": {
+    "gpu": "NVIDIA T4",
+    "python": "3.8.5",
+    "torch": "1.13.0+cu116"
+  },
+  "warmup": 50,
+  "implementation": "original predict_partition path including crop preparation, GPU-to-host probability transfer, and NumPy fusion",
+  "geometries": {
+    "full_image_1x1600": {
+      "runs": 500,
+      "mean_ms": 10.254852999999999,
+      "p99_ms": 14.773031999999995,
+      "p99_5_ms": 17.706127499999994,
+      "max_ms": 21.2129
+    },
+    "non_overlap_4x400": {
+      "runs": 500,
+      "mean_ms": 54.76820860000001,
+      "p99_ms": 60.838528,
+      "p99_5_ms": 63.34948849999998,
+      "max_ms": 71.7535
+    },
+    "mild_overlap_4x416": {
+      "runs": 500,
+      "mean_ms": 55.1576648,
+      "p99_ms": 62.459635,
+      "p99_5_ms": 64.13645849999999,
+      "max_ms": 75.6611,
+      "mean_ratio_vs_non_overlap": 1.0071109902981197,
+      "p99_5_ratio_vs_non_overlap": 1.0124226733101407
+    },
+    "heavy_overlap_5x400": {
+      "runs": 500,
+      "mean_ms": 67.36229939999998,
+      "p99_ms": 75.93622899999998,
+      "p99_5_ms": 81.39100099999997,
+      "max_ms": 89.115,
+      "mean_ratio_vs_non_overlap": 1.2299525787301353,
+      "p99_5_ratio_vs_non_overlap": 1.284793341306931
+    }
+  }
+}

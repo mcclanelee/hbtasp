@@ -45,9 +45,11 @@ python verify_release.py
 
 `verify_manifest.py` is read-only and checks every packaged file against
 `RELEASE_SHA256.json`. `verify_release.py` is also read-only and checks row
-counts, terminal-state conservation, nominal thermal invariants, and the final
-Top-K and priority-discrimination protocols. `generate_manifest.py` is a
-maintainer-only command to run after an intentional release change.
+counts, terminal-state conservation, nominal thermal invariants, the
+equal-cell aggregation used in the article, and frozen numerical contracts for
+the low-voltage and overlap-runtime audits, in addition to the final Top-K and
+priority-discrimination protocols. `generate_manifest.py` is a maintainer-only
+command to run after an intentional release change.
 
 ## Repository layout
 
@@ -60,6 +62,8 @@ maintainer-only command to run after an intentional release change.
 - `mask_replay_final_test_shared/`: frozen region/level confusion counts used
   for deadline-aware replay.
 - `docs/REPRODUCIBILITY_MAP.md`: published-article claim-to-code/result map.
+- `docs/PAPER_RESULT_CONSISTENCY_AUDIT.md`: numerical cross-check against the
+  published article and Supplementary Material, including traceability limits.
 
 The Severstal images and trained neural-network weights are not redistributed.
 The protocol uses 6,666 defect-positive source images split by source identifier
@@ -75,6 +79,8 @@ Run experiment modules from the repository root. The frozen checkpoints allow
 the analyzers and verification commands to run without repeating long grids.
 
 ```bash
+python -m experiments.run_v5_productive_cooling_ablation
+python -m experiments.analyze_v5_productive_cooling_ablation
 python -m experiments.run_v8_calibrated_final_factorial
 python -m experiments.analyze_v8_calibrated_final_factorial
 python -m experiments.run_v9_thermal_augmented_factorial
@@ -113,6 +119,17 @@ The final service--perception evidence has three distinct roles:
   mandatory-region service failure in this grid does not imply equal delivered
   perception quality; the experiment isolates which region receives protected
   service. The charged-latency effect is assessed separately in v21.
+
+Two supplementary evidence sets have deliberately separate scopes:
+
+- `v5_productive_cooling_ablation` is the 560-cell same-kernel paired audit
+  underlying the article's small average voltage and modeled-temperature
+  effects. `v18_wide_cooling_mechanism` is the separate 880-cell wide-period
+  mechanism audit; the two grids should not be interchanged.
+- `perception_evidence/overlap_runtime_t4/` contains the independent 500-run
+  NVIDIA T4 processing-cost audit for the non-overlap, mild-overlap, and
+  heavy-overlap crop geometries. It is distinct from both the perception-only
+  overlap summary and the per-path scheduling execution-time profiles.
 
 To recreate the two load-stratified supplementary figures from the frozen v19
 and v22 summaries, run:

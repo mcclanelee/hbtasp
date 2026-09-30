@@ -18,13 +18,16 @@ All commands are run from the repository root. Frozen outputs are under
 | Strict all-regions-mandatory matched grid | `run_v14_strict_all_regions_matched.py` | `v14_strict_all_regions_matched/` |
 | HEAT 100-ms feasibility boundary | `run_v15_heat_100ms_feasible_domain.py` | `v15_heat_100ms_feasible_domain/` |
 | Thermal-model and ambient sensitivity | `run_v17_thermal_deployment_sensitivity.py`; `analyze_v17_thermal_deployment_sensitivity.py` | `v17_thermal_deployment_sensitivity/` |
-| Low-voltage branch mechanism | `run_v18_wide_cooling_mechanism.py`; `analyze_v18_wide_cooling_mechanism.py` | `v18_wide_cooling_mechanism/` |
+| Low-voltage branch, 560-cell paired effect | `run_v5_productive_cooling_ablation.py`; `analyze_v5_productive_cooling_ablation.py` | `v5_productive_cooling_ablation/` |
+| Low-voltage branch, 880-cell wide-period mechanism | `run_v18_wide_cooling_mechanism.py`; `analyze_v18_wide_cooling_mechanism.py` | `v18_wide_cooling_mechanism/` |
 | Top-$K_M$ service--perception trade-off | `run_v19_topk_mandatory_sweep.py`; `analyze_v19_topk_mandatory_sweep.py` | `v19_topk_mandatory_sweep/` |
 | Multi-cue priority quality and charged cost | `run_v21_multicue_priority_aligned.py`; `analyze_v21_multicue_priority_aligned.py` | `v21_multicue_priority_aligned/` |
 | Held-out calibration and aligned quality--cost figure (Supplementary Fig. 16) | `plot_v21_priority_calibration_quality_cost.py` | `v21_multicue_priority_aligned/` plus `perception_evidence/histogram_direction_calibration/` |
 | Controlled priority-discrimination envelope | `run_v22_priority_discrimination_envelope.py`; `analyze_v22_priority_discrimination_envelope.py` | `v22_priority_discrimination_envelope/` |
 | Hidden execution-time overrun robustness | `run_v4_r2_6_hidden_overrun.py`; `analyze_v4_r2_6_hidden_overrun.py` | `v4_r2_6_hidden_overrun/` |
 | Published mean scheduler-overhead table | aggregate only; original repetition-level log was not retained | `scheduler_overhead/reported_mean_overhead.csv` and `scheduler_overhead/PROVENANCE.md` |
+| Crop-overlap perception and boundary subset | perception evaluators and bootstrap analysis | `perception_evidence/overlap_corrected_final/` |
+| Independent 500-run NVIDIA T4 overlap-processing cost | frozen prototype timing protocol | `perception_evidence/overlap_runtime_t4/` |
 
 `plot_r2_priority_and_topk_evidence.py` recreates the load-stratified
 Supplementary Figs. 19 and 20 from v19 and v22 while preserving the separate
