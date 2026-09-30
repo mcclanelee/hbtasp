@@ -51,8 +51,12 @@ def make_topk_figure():
         ax.set_ylabel(r"Mandatory count $K_M$")
         fig.colorbar(image, ax=ax, fraction=0.046, pad=0.03)
     fig.suptitle("Load-dependent Top-$K_M$ service--perception envelope", fontsize=12)
-    fig.savefig(TOPK / "v19_topk_mandatory_tradeoff.pdf", bbox_inches="tight")
-    fig.savefig(TOPK / "v19_topk_mandatory_tradeoff.png", dpi=300, bbox_inches="tight")
+    # Keep the load-stratified Supplementary Fig. 19 separate from the
+    # aggregate Top-K trade-off in Supplementary Fig. 14.  The two figures
+    # intentionally use the same frozen v19 cells but present different
+    # aggregations.
+    fig.savefig(TOPK / "v19_topk_load_envelope.pdf", bbox_inches="tight")
+    fig.savefig(TOPK / "v19_topk_load_envelope.png", dpi=300, bbox_inches="tight")
     plt.close(fig)
 
 

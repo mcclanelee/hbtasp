@@ -17,6 +17,7 @@ EXPECTED_ROWS = {
     "v8_calibrated_tight_boundary": ("cell_results.csv", 700),
     "v8_calibrated_multidefect_stratified": ("cell_strata.csv", 1200),
     "v9_thermal_augmented_factorial": ("cell_results.csv", 800),
+    "v10_mandatory_outcome_audit": ("cell_results.csv", 800),
     "v11_unified_overall": ("cell_results.csv", 800),
     "v12_protected_certificate_audit": ("certificate_instances.csv", 40),
     "v13_esatd_unified_levels": ("cell_results.csv", 1000),
@@ -29,6 +30,7 @@ EXPECTED_ROWS = {
     "v19_topk_mandatory_sweep": ("cell_results.csv", 800),
     "v21_multicue_priority_aligned": ("cell_results.csv", 600),
     "v22_priority_discrimination_envelope": ("cell_results.csv", 600),
+    "scheduler_overhead": ("reported_mean_overhead.csv", 25),
 }
 
 
@@ -101,6 +103,20 @@ def main() -> None:
     if any(int(numeric(row, "mandatory_count")) != 1 for row in priority):
         failures.append("v22: controlled discrimination envelope must use Top-1")
 
+    terminal_audit = loaded.get("v10_mandatory_outcome_audit", [])
+    terminal_fields = [
+        "mandatory_completed_on_time",
+        "mandatory_completed_late",
+        "mandatory_expired",
+        "mandatory_dispatch_infeasible",
+        "mandatory_allocation_rejected",
+    ]
+    for row in terminal_audit:
+        accounted = sum(numeric(row, field) for field in terminal_fields)
+        if abs(accounted - numeric(row, "mandatory_released")) > 1e-12:
+            failures.append("v10: mandatory terminal outcomes are not exhaustive")
+            break
+
     strict = loaded.get("v5_strict_all_regions_boundary", [])
     if any(row.get("hardware_input_gpu1") != "power_capped_T4_measured_input"
            for row in strict):
@@ -126,6 +142,13 @@ def main() -> None:
         ROOT / "experiments" / "HEAT_PAPER_CONTRACT_V1.md",
         ROOT / "experiments" / "DATA_AUTHORITY_V5.md",
         ROOT / "experiments" / "checkpoints" / "v5_multicue_priority" / "multicue_test_pool.json",
+        ROOT / "experiments" / "checkpoints" / "v9_restored_main_figures" / "v9_factorial_ablation.pdf",
+        ROOT / "experiments" / "checkpoints" / "v10_mandatory_outcome_audit" / "v10_mandatory_terminal_outcomes.pdf",
+        ROOT / "experiments" / "checkpoints" / "v10_mandatory_outcome_audit" / "v10_dynamic_hard_realtime_service_map.pdf",
+        ROOT / "experiments" / "checkpoints" / "v14_unified_overall_corrected_heat" / "cell_results.csv",
+        ROOT / "experiments" / "checkpoints" / "v19_topk_mandatory_sweep" / "v19_topk_load_envelope.pdf",
+        ROOT / "experiments" / "checkpoints" / "v21_multicue_priority_aligned" / "v21_priority_calibration_quality_cost.pdf",
+        ROOT / "experiments" / "checkpoints" / "scheduler_overhead" / "reported_mean_overhead.csv",
         ROOT / "perception_evidence" / "overlap_corrected_final" / "summary.csv",
     ]
     failures.extend(
@@ -136,7 +159,7 @@ def main() -> None:
     if failures:
         raise SystemExit("RELEASE VERIFICATION FAILED\n" + "\n".join(failures))
     print(
-        f"RELEASE VERIFICATION PASSED: {len(EXPECTED_ROWS)} experiment grids "
+        f"RELEASE VERIFICATION PASSED: {len(EXPECTED_ROWS)} experiment/result tables "
         "and the declared scientific contracts"
     )
 

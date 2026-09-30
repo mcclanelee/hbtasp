@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "completed_cells": 800,
+  "total_cells": 800,
+  "updated_utc": "2026-08-16T11:05:31.248219+00:00",
+  "elapsed_seconds_this_run": 1438.273180961609,
+  "semantic_invariant": "legacy mandatory_dmr == mandatory_service_failure_rate",
+  "decision_mechanism": "unchanged frozen V8 schedulers",
+  "source_pool_sha256": "31fe3ef9e44c2a3b9f8af9331f2727651cd3835a0c1f293097a3c754cae54b00",
+  "result_sha256": "84fc352915aaeac1508fd9f5847c52420ee26bc1e0943f97999a80991e88bef4"
+}

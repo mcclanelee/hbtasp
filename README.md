@@ -78,6 +78,8 @@ the analyzers and verification commands to run without repeating long grids.
 python -m experiments.run_v8_calibrated_final_factorial
 python -m experiments.analyze_v8_calibrated_final_factorial
 python -m experiments.run_v9_thermal_augmented_factorial
+python -m experiments.run_v10_mandatory_outcome_audit
+python -m experiments.analyze_v10_mandatory_outcome_audit
 python -m experiments.run_v11_unified_overall
 python -m experiments.run_v19_topk_mandatory_sweep
 python -m experiments.analyze_v19_topk_mandatory_sweep
@@ -85,6 +87,14 @@ python -m experiments.run_v21_multicue_priority_aligned
 python -m experiments.analyze_v21_multicue_priority_aligned
 python -m experiments.run_v22_priority_discrimination_envelope
 python -m experiments.analyze_v22_priority_discrimination_envelope
+```
+
+The main crossed-comparison figure and the Supplementary priority
+quality--cost figure can be recreated independently from frozen summaries:
+
+```bash
+python -m experiments.plot_main_factorial_comparison
+python -m experiments.plot_v21_priority_calibration_quality_cost
 ```
 
 The final service--perception evidence has three distinct roles:
@@ -122,3 +132,9 @@ The calibrated histogram improves over random ranking but has limited
 discrimination, so its errors can reduce complete-image Dice and pixel recall,
 especially at tighter loads. A more accurate estimator is useful only when its
 processing cost is included in admission and schedulability analysis.
+
+The machine-readable scheduling-overhead means are retained under
+`experiments/checkpoints/scheduler_overhead/`. The original repetition-level
+benchmark log was not retained, so these values reproduce the published table
+but do not support recomputation of dispersion or tail latency; see the local
+provenance note.
