@@ -3,7 +3,7 @@
 All commands are run from the repository root. Frozen outputs are under
 `experiments/checkpoints/`; analyzers validate and summarize those outputs.
 
-| Manuscript or Supplement evidence | Runner / analyzer | Frozen result |
+| Published article or Supplement evidence | Runner / analyzer | Frozen result |
 |---|---|---|
 | Main factorial comparison and complete-image endpoints | `run_v8_calibrated_final_factorial.py`; `analyze_v8_calibrated_final_factorial.py` | `v8_calibrated_final_factorial/` |
 | Nominal RC thermal reconstruction | `run_v9_thermal_augmented_factorial.py`; `analyze_v9_thermal_augmented_factorial.py` | `v9_thermal_augmented_factorial/` |
@@ -21,8 +21,8 @@ All commands are run from the repository root. Frozen outputs are under
 | Controlled priority-discrimination envelope | `run_v22_priority_discrimination_envelope.py`; `analyze_v22_priority_discrimination_envelope.py` | `v22_priority_discrimination_envelope/` |
 | Hidden execution-time overrun robustness | `run_v4_r2_6_hidden_overrun.py`; `analyze_v4_r2_6_hidden_overrun.py` | `v4_r2_6_hidden_overrun/` |
 
-`plot_r2_priority_and_topk_evidence.py` recreates the two R2 supplementary
-figures from v19 and v22. Perception-only protocols and aggregate outputs are
+`plot_r2_priority_and_topk_evidence.py` recreates the two supplementary figures
+from v19 and v22. Perception-only protocols and aggregate outputs are
 under `perception_code/` and `perception_evidence/`, respectively.
 
 The principal inference unit is the paired seed cluster where stated by the

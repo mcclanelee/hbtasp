@@ -1,9 +1,13 @@
 # HBTASP reproducibility package
 
-This anonymous repository contains the executable scheduling and event-replay
+This repository contains the executable scheduling and event-replay
 code, frozen cell-level results, analysis scripts, and perception summaries for
-the revised HBTASP manuscript and its Supplement. The review snapshot cited in
-the manuscript is <https://anonymous.4open.science/r/hbtasp-62C1/>.
+the article *HBTASP: Two-Stage Temperature-Aware Multiprocessor Scheduling for
+Dynamic DNNs in Real-Time Defect Detection*, published online in *Expert Systems
+with Applications* (Article 134539; <https://doi.org/10.1016/j.eswa.2026.134539>),
+and its accompanying Supplementary Material. The anonymous repository snapshot
+cited in the published article remains available at
+<https://anonymous.4open.science/r/hbtasp-62C1/>.
 
 ## What the evidence represents
 
@@ -23,7 +27,7 @@ the manuscript is <https://anonymous.4open.science/r/hbtasp-62C1/>.
   metrics.
 
 These boundaries match `PROVENANCE.md`, `experiments/DATA_AUTHORITY_V5.md`,
-and the manuscript's experimental-setting and limitation statements.
+and the published article's experimental-setting and limitation statements.
 
 ## Quick verification
 
@@ -55,7 +59,7 @@ maintainer-only command to run after an intentional release change.
 - `perception_evidence/`: frozen aggregate perception results.
 - `mask_replay_final_test_shared/`: frozen region/level confusion counts used
   for deadline-aware replay.
-- `docs/REPRODUCIBILITY_MAP.md`: manuscript claim-to-code/result map.
+- `docs/REPRODUCIBILITY_MAP.md`: published-article claim-to-code/result map.
 
 The Severstal images and trained neural-network weights are not redistributed.
 The protocol uses 6,666 defect-positive source images split by source identifier
@@ -100,8 +104,8 @@ The final service--perception evidence has three distinct roles:
   perception quality; the experiment isolates which region receives protected
   service. The charged-latency effect is assessed separately in v21.
 
-To recreate the two load-stratified revision figures from the frozen v19 and
-v22 summaries, run:
+To recreate the two load-stratified supplementary figures from the frozen v19
+and v22 summaries, run:
 
 ```bash
 python -m experiments.plot_r2_priority_and_topk_evidence
