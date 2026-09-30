@@ -74,6 +74,7 @@ enabled only for R2.6 robustness analysis, are sampled after dispatch.
 ## Superseded evidence
 
 `v4_final_factorial` predates the correction that assigns the selected-level
-budget at Stage-I construction time. Its checkpoint is retained for audit but
-must not be cited as final factorial evidence. The authoritative rerun is
-`v5_final_factorial_selected_budget`.
+budget at Stage-I construction time. Its checkpoint is intentionally excluded
+from this final release and must not be cited as final factorial evidence. The
+corrected rerun is `v5_final_factorial_selected_budget`; the final held-out,
+calibrated factorial evidence is `v8_calibrated_final_factorial`.

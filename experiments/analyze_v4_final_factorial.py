@@ -1,4 +1,4 @@
-"""Validate and analyze the completed V4 final factorial."""
+"""Reusable validator for the final 2x2 factorial evidence."""
 
 from __future__ import annotations
 
@@ -10,7 +10,10 @@ import pandas as pd
 from scipy import stats
 
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/"experiments/checkpoints/v4_final_factorial"
+# The superseded V4 checkpoint is intentionally not shipped.  Direct module
+# execution therefore defaults to the final held-out calibrated factorial;
+# callers may still select another compatible checkpoint with ``--out``.
+OUT=ROOT/"experiments/checkpoints/v8_calibrated_final_factorial"
 DATA=OUT/"cell_results.csv"
 KEYS=["period_ms","lines","seed"]
 METRICS=["mandatory_dmr","historical_completed_only_dice",
